@@ -6,7 +6,7 @@
 
 我们熟悉的、传统的CDN如下：
 
-![CDN](http://www.51know.info/system_performance/cdn/cdn_overview.gif)
+![CDN](https://github.com/yangshiqi/wiki/blob/master/cdn_overview.gif)
 
 用户根据所在运营商网络（比如北联通，南电信），发起HTTP请求。CDN会根据用户所在网络，就近去将他路由到同运营商网络中的节点。如图，联通用户在访问好大夫在线时，根据DNS原则，发现其请求来自广东电信，此时，CDN网络会优先将他发起的HTTP请求发送到广东电信机房，来尝试响应其所需要的资源（如html静态页，图片，css等），如果北京联通机房有这个资源文件，则立即返回给用户，请求结束。如果没有，则根据网站配置的规则，返回好大夫在线位于北京的IDC多线机房，取回相关的内容，然后按照原路返回到广东电信机房，缓存这个内容，再返回给广东的那个用户。比如用户使用的是ADSL，我们假设他访问DNS是5ms，访问电信机房的握手时间是10ms，传输时间是500ms（取决于用户的网速），那么总共加起来时间5ms+10ms+500ms+10ms=525ms。而如果回源取内容的话，假设是从广东电信到北京电信，传输需要50ms+10ms+10ms（假设运营商之间有光纤直连，传输1M数据只需要10ms，访问好大夫服务器只需要10ms，电信之间链路需要50ms）=70ms，则加上之前的近535ms。
 
@@ -19,7 +19,7 @@
 
 简单网络图：
 
-![mobile](http://cdn3.infoqstatic.com/resource/news/2014/07/cdn-for-mobile/zh/resources/61.png)
+![mobile](https://github.com/yangshiqi/wiki/blob/master/mobilecdn.png)
 
 >注： Last-mile 最后一公里，通信行业经常使用“最后一公里”来指代从通信服务提供商的机房交换机到用户计算机等终端设备之间的连接。
 
