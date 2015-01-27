@@ -209,4 +209,8 @@ origin https://github.com/youraccount/yourproject.git (push)
 git remote set-url origin git@github.com:youraccount/yourproject.git
 
 
+附录：
 
+* https://try.github.io/levels/1/challenges/1  -- Git互动教程
+* http://git-scm.com/book/zh/v1  -- 《Pro Git》
+* http://www.worldhello.net/ -- 《GotGitHub》
