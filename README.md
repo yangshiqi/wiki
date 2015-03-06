@@ -1,8 +1,8 @@
-Be a Hero! [.](http://www.gopro.com)
+Be a Hero@好大夫在线技术团队 [.](http://www.gopro.com)
 ====
 
 ### 2015年度
-* [系统&运维团队月刊@2015-02](https://github.com/yangshiqi/wiki/blob/master/team-mag/201502.md)
+* [技术团队月刊@2015-02](https://github.com/yangshiqi/wiki/blob/master/team-mag/201502.md)
 * [系统&运维团队月刊@2015-01](https://github.com/yangshiqi/wiki/blob/master/team-mag/201501.md)
 
 ### 2014年度
