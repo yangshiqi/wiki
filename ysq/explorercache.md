@@ -23,7 +23,7 @@ Cache-Control是指明当前资源的有效期，以控制是直接从浏览器�
 | no-cache |	所有内容都不会被缓存 |
 | no-store	| 所有内容都不会被缓存到缓存或 Internet 临时文件中 |
 | must-revalidation/proxy-revalidation |	如果缓存的内容失效，请求必须发送到服务器/代理以进行重新验证 |
-| max-age=xxx (xxx is numeric)	| 缓存的内容将在 xxx 秒后失效, 这个选项只在HTTP 1.1可用, 并如果和| Last-Modified一起使用时, 优先级较高 |
+| max-age=xxx (xxx is numeric)	| 缓存的内容将在 xxx 秒后失效, 这个选项只在HTTP 1.1可用, 并如果和Last-Modified一起使用时, 优先级较高 |
 
 以上概念中，比较重要的是：
 * max-age：浏览器可以接收生存期不大于指定时间（以秒为单位）的响应；
