@@ -34,6 +34,13 @@ varnish内部的简单原理示意如下：
 
 ![simple](https://github.com/yangshiqi/wiki/blob/master/imgs/varnish/simple.jpg)
 
-跟进一步的：
+简单解释：在收到请求(recevie)，检查当前配置的规则，如果请求在规则中，则检查缓存区(Lookup)，命中(Hit)的话就直接返回了(Deliver)。如果没有命中(Miss)，则根据服务器集群的配置，转发到后端服务器集群处理(Fetch)，然后保存结果，返回请求(Deliver)。如果当前的请求没有配置缓存策略(Pass)，则直接Fetch后端，然后直接Deliver结果。
+
+Pipe和Pass有类似，在这可以先忽略，具体的差异可以参考：[pass or pipe](http://yeelone.blog.51cto.com/1476571/772369)。
+
+看到这，相信大多数都可以理解varnish的一般工作原理和我们所谓的“页面缓存”的概念了。当然，varnish在目前的开发和测试环境中是没有部署的，这点是需要特别指出来打架要注意的，被缓存的页面是当做html处理、并且直接返回的。这代表着这些被缓存的页面不是每次请求来是，都会执行后台的php逻辑的，在这些页面上如果要实现动态功能（比如：判断登录、收藏、访问量等），就需要单独实现ajax异步请求了。
+
+
+进一步的：
 
 ![simple](https://github.com/yangshiqi/wiki/blob/master/imgs/varnish/big.jpg)
