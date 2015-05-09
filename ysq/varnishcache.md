@@ -28,7 +28,7 @@
 
 ![rules](https://github.com/yangshiqi/wiki/blob/master/imgs/varnish/varnish-2.png)
 
-在命中这些规则后，会优先去varnish中查找是否有内容且没有过期（上图中的set beresp.ttl = 60 m 可以理解为缓存60分钟），如果有内容，则直接返回数据，就不需要再访问后边的服务器集群获取数据了，这也就是我们常说的“页面缓存”概念。我们知道，用户请求一个页面(比如http://www.haodf.com/hospital/DE4rIxMvCogR-EoxrURJ3U3.htm)，是需要webapp层->service层->db层等调用顺序的，且service还会多次调用，还有可能涉及到搜索引擎等等各种操作，开销是非常大的。如果配置的页面缓存，则直接命中返回了，后端没有任何开销。
+在命中这些规则后，会优先去varnish中查找是否有内容且没有过期（上图中的set beresp.ttl = 60 m 可以理解为缓存60分钟），如果有内容，则直接返回数据，就不需要再访问后边的服务器集群获取数据了，这也就是我们常说的“页面缓存”概念。我们知道，用户请求一个[页面](http://www.haodf.com/hospital/DE4rIxMvCogR-EoxrURJ3U3.htm)，是需要webapp层->service层->db层等调用顺序的，且service还会多次调用，还有可能涉及到搜索引擎等等各种操作，开销是非常大的。如果配置的页面缓存，则直接命中返回了，后端没有任何开销。
 
 varnish内部的简单原理示意如下：
 
