@@ -124,11 +124,11 @@ function getUser($userName)
 #### 命名过于笼统或者随意
 
 
-症状：HTMLHelper，UserManager，XString...具体可以参考:http://svn.haodf.net/svn/libs/trunk/framework/util/xstring.php。在各种helper，manager类中，往往混杂了大量说不清楚，或者职责模棱两可的地方，于是我们发明了粘合剂类，用于填充那些谁也不管的功能。
+症状：HTMLHelper，UserManager，XString... 具体可以参考: [xstring.php](http://svn.haodf.net/svn/libs/trunk/framework/util/xstring.php)。在各种helper，manager类中，往往混杂了大量说不清楚，或者职责模棱两可的地方，于是我们发明了粘合剂类，用于填充那些谁也不管的功能。
 
 解毒：粘合剂不是一定不能有，但是要在设计时就考虑清楚其职责，而不是笼统的起一个xxxHelper来放。其他人可不知道你这个到底是干嘛的，也不敢用。久而久之就成了垃圾箱。
 
-进阶：深层次的问题是在面向对象开发过程中的职责不清，到底什么逻辑放到service中，什么逻辑放到实体或者知识类中？可以参考：http://svn.haodf.net/svn/services/message/trunk/src/service/smssvc.php
+进阶：深层次的问题是在面向对象开发过程中的职责不清，到底什么逻辑放到service中，什么逻辑放到实体或者知识类中？可以参考：[message系统服务](http://svn.haodf.net/svn/services/message/trunk/src/service/smssvc.php).
 
 推荐阅读：
 
