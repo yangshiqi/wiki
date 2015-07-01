@@ -128,7 +128,9 @@ function getUser($userName)
 
 解毒：粘合剂不是一定不能有，但是要在设计时就考虑清楚其职责，而不是笼统的起一个xxxHelper来放。其他人可不知道你这个到底是干嘛的，也不敢用。久而久之就成了垃圾箱。
 
-进阶：深层次的问题是在面向对象开发过程中的职责不清，到底什么逻辑放到service中，什么逻辑放到实体或者知识类中？可以参考：http://svn.haodf.net/svn/services/message/trunk/src/service/smssvc.php 以及：
+进阶：深层次的问题是在面向对象开发过程中的职责不清，到底什么逻辑放到service中，什么逻辑放到实体或者知识类中？可以参考：http://svn.haodf.net/svn/services/message/trunk/src/service/smssvc.php
+
+推荐阅读：
 
 * [![agile](http://img3.douban.com/mpic/s1671095.jpg)](http://book.douban.com/subject/1140457/)
 
